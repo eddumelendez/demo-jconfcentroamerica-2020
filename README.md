@@ -33,3 +33,5 @@ gcloud iam service-accounts keys create cloudsql-client-service-account-key.json
 Now, we can perform the script `./setup` in order to create the DB instance and the database. Later, the image would be created and deployed in Google Cloud Run.
 
 In order to test it locally using the `docker-compose.yml` file you can build the following image `./mvnw spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=demo-jconfcentroamerica-2020:0.0.1-SNAPSHOT` and then `docker-compose up`
+
+NOTE: If you have docker 20.10 installed then make sure `Use gRPC FUSE for file sharing` is unchecked.
